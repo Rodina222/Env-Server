@@ -58,14 +58,6 @@ func (app *App) registerHandlers() error {
 
 }
 
-/*if r.Method != http.MethodGet {
-
-	if r.Method != http.MethodGet {
-		w.WriteHeader(http.StatusNotFound)
-		return
-	}
-}*/
-
 func (app *App) envhandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method != http.MethodGet {
