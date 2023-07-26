@@ -14,8 +14,6 @@ func main() {
 
 	flag.IntVar(&port, "p", 8080, "port setted by the user to run the app")
 
-	fmt.Println("port detected:", port)
-
 	flag.Parse()
 
 	app, err := server.NewApp(port)
@@ -24,10 +22,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = app.Run()
-
-	if err != nil {
-		log.Fatal(err)
+	if err = app.Run() ; err!=nil {
+    		log.Fatal(err)
 	}
 
 }
