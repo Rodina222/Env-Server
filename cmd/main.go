@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 
 	server "github.com/codescalersinternships/EnvServer-Rodina/internal"
