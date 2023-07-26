@@ -88,9 +88,9 @@ func (app *App) handleGetEnv(w http.ResponseWriter, r *http.Request) {
 
 	envMap := make(map[string]string)
 
-	for _, environ := range os.Environ() {
+	for _, envVarString := range os.Environ() {
 
-		pair := strings.SplitN(environ, "=", 2)
+		pair := strings.SplitN(envVarString, "=", 2)
 
 		envMap[pair[0]] = pair[1]
 	}
