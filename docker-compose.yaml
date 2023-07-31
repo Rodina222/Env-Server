@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  envserver:
+    build:
+      context: .
+    container_name: envserver-container
+    image: envserver-docker
+    
+    ports:
+      - 8080:8080
